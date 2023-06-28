@@ -8,7 +8,7 @@ namespace Notes.Application.Notes.Queries.GetNoteDetails
     /// <summary>
     /// То, что будет возвращаться Пользователю при запросе деталей Заметки
     /// </summary>
-    internal class NoteDetailsViewModel : IMapWith<NoteModel>
+    public class NoteDetailsViewModel : IMapWith<NoteModel>
     {
         /// <summary>
         /// Id заметки

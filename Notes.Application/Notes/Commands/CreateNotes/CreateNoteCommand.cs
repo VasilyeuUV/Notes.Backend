@@ -7,7 +7,7 @@ namespace Notes.Application.Notes.Commands.CreateNotes
     /// Команда на создание Заметки
     /// (содержит только то, что необходимо для создания Заметки)
     /// </summary>
-    internal class CreateNoteCommand : IRequest<Guid>
+    public class CreateNoteCommand : IRequest<Guid>
     {
         /// <summary>
         /// Id Пользователя, создавшего заметку

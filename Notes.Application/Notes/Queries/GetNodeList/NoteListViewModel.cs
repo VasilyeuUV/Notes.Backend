@@ -5,7 +5,7 @@ namespace Notes.Application.Notes.Queries.GetNodeList
     /// <summary>
     /// Вьюмодель списка Заметок
     /// </summary>
-    internal class NoteListViewModel
+    public class NoteListViewModel
     {
         /// <summary>
         /// Список Заметок

@@ -3,7 +3,7 @@
     /// <summary>
     /// Инициализатор базы данных
     /// </summary>
-    internal class DbInitializer
+    public class DbInitializer
     {
         /// <summary>
         /// Инициализация БД

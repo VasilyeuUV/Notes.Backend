@@ -6,7 +6,7 @@ namespace Notes.Application.Notes.Commands.DeleteNote
     /// <summary>
     /// Команда удаления Заметки
     /// </summary>
-    internal class DeleteNoteCommand : IRequest
+    public class DeleteNoteCommand : IRequest
     {
         /// <summary>
         /// Id Пользователя, создавшего заметку

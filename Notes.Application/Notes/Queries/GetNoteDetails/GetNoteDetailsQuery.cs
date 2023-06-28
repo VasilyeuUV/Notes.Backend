@@ -6,7 +6,7 @@ namespace Notes.Application.Notes.Queries.GetNoteDetails
     /// <summary>
     /// Запрос на получение списка заметок
     /// </summary>
-    internal class GetNoteDetailsQuery : IRequest<NoteDetailsViewModel>
+    public class GetNoteDetailsQuery : IRequest<NoteDetailsViewModel>
     {
         /// <summary>
         /// Id пользователя, добавившего заметку
