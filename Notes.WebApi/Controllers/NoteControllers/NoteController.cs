@@ -14,6 +14,7 @@ namespace Notes.WebApi.Controllers.NoteControllers
     /// <summary>
     /// Контроллер для работы с Заметками
     /// </summary>
+    [Route("api/[controller]")]
     public class NoteController : AControllerBase
     {
         private IMapper _mapper;            // - Маппер для преобразования входных данных в команду (внедряем tuj как зависимость через конструктор)

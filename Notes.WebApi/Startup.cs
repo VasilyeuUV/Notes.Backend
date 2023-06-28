@@ -1,14 +1,13 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System.Reflection;
+using Notes.Application;
 using Notes.Application.Common.Mappings;
 using Notes.Application.Interfaces;
-using Notes.Application;
 using Notes.Persistence;
-using Microsoft.Extensions.Configuration;
+using System.Reflection;
 
 namespace Notes.WebApi
 {
@@ -44,6 +43,8 @@ namespace Notes.WebApi
 
             services.AddAplication();                   // - добавление слоя application
             services.AddPersistence(Configuration);     // - добавление БД
+            services.AddControllers();                  // - добавление контроллеров
+
 
             services.AddCors(options =>
             {
