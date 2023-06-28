@@ -45,7 +45,6 @@ namespace Notes.WebApi
             services.AddPersistence(Configuration);     // - добавление БД
             services.AddControllers();                  // - добавление контроллеров
 
-
             services.AddCors(options =>
             {
                 // настройки, позволяющие стучаться на наш сайт кому угодно и как угодно (НА ПРОДЕ ТАК НЕ ДЕЛАТЬ!!!)
@@ -74,7 +73,7 @@ namespace Notes.WebApi
 
 
             // - middlewares
-            app.UseRouting();                               // - использование роутинга
+            app.UseRouting();                               // - использование роутинга (возможность маршрутизации)
             app.UseHttpsRedirection();                      // - перенаправление с http на https
             app.UseCors("AllowAll");                        // - политика CORS
 

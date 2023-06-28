@@ -1,7 +1,9 @@
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Notes.Persistence;
+using System.Reflection;
 
 namespace Notes.WebApi
 {
@@ -11,10 +13,11 @@ namespace Notes.WebApi
         {
             var host = CreateHostBuilder(args).Build();
 
-            using(var scope = host.Services.CreateScope())
+            using (var scope = host.Services.CreateScope())
             {
                 // - инициализация базы
                 var serviceProvider = scope.ServiceProvider;
+
                 try
                 {
                     // - получение контекста БД
@@ -33,7 +36,8 @@ namespace Notes.WebApi
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>();
+                    webBuilder
+                    .UseStartup<Startup>();
                 });
     }
 }

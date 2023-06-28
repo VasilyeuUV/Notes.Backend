@@ -18,7 +18,7 @@ namespace Notes.Persistence
         /// <returns></returns>
         public static IServiceCollection AddPersistence(this IServiceCollection services, IConfiguration configuration)
         {
-            var connectionString = configuration["DbConnection"];
+            var connectionString = configuration["SqLiteConnection"];
             services.AddDbContext<NotesDbContext>(options =>
             {
                 options.UseSqlite(connectionString);
