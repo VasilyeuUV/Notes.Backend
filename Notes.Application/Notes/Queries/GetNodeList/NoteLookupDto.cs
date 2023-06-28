@@ -8,7 +8,7 @@ namespace Notes.Application.Notes.Queries.GetNodeList
     /// <summary>
     /// 
     /// </summary>
-    internal class NoteLookupDto : IMapWith<NoteModel>
+    public class NoteLookupDto : IMapWith<NoteModel>
     {
 
         /// <summary>
